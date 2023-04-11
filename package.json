@@ -1,0 +1,29 @@
+{
+  "name": "vue-project",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "beautiful": "prettier --single-quote --trailing-comma all --tab-width 2 --write 'src/**/*.{vue,js,json,scss}'",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "nuxt": "^3.3.3",
+    "pinia": "^2.0.33",
+    "typescript": "^5.0.3",
+    "vue": "^3.2.47",
+    "vuetify": "^3.1.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "eslint": "^8.37.0",
+    "eslint-plugin-vue": "^9.10.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "prettier": "^2.8.7",
+    "sass": "^1.60.0",
+    "sass-loader": "^13.2.2",
+    "vite": "^4.1.4"
+  }
+}
