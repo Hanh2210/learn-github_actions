@@ -3,14 +3,12 @@
     ref="textarea"
     class="app-textarea"
     :class="variantClass"
+    :value="'Được dịch từ tiếng Anh-Trong xuất bản và thiết kế đồ họa, Lorem ipsum là một văn bản giữ chỗ thường được sử dụng để thể hiện hình thức trực quan của tài liệu hoặc kiểu chữ mà không dựa vào nội dung có ý nghĩa. Lorem ipsum có thể được sử dụng làm trình giữ chỗ trước khi có bản sao cuối cùng. Wikipedia (tiếng Anh)'"
     :style="autoResize"
     :placeholder="placeholder"
     @focus="scrollToBottom"
     @input="$emit('input', $event.target.value)"
-  >
-hanh hanh hanh hanh hanh hanh hanh hanh hanh hanh 
-hanh hanh hanh hanh hanh hanh hanh hanh hanh hanh</textarea
-  >
+  ></textarea>
 </template>
 
 <script>
@@ -60,6 +58,10 @@ export default {
   },
   mounted() {
     this.adjustHeight();
+    this.$nextTick(() => {
+      const textarea = this.$refs.textarea;
+      textarea.scrollTop = textarea.scrollHeight;
+    });
   },
   updated() {
     this.$nextTick(function () {
