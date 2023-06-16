@@ -28,7 +28,7 @@ jobs:
           file: ./Dockerfile
           builder: ${{steps.buildx.outputs.name}}
           push: true
-          tags: ${{secret.DOCKERHUB_USERNAME}}/test-github-action
+          tags: ${{secrets.DOCKERHUB_USERNAME}}/test-github-action
 
       - name: Verify
         run: echo ${{ step.docker_build.outputs.digest}}
