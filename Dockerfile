@@ -1,3 +1,4 @@
+
 # Use the official Node.js 14 image as the base image
 FROM node:14
 
@@ -14,7 +15,7 @@ RUN npm install
 COPY . .
 
 # Expose a port if necessary (replace PORT_NUMBER with the actual port number)
-EXPOSE PORT_NUMBER
+EXPOSE 3000
 
 # Set the command to run your application (replace "start" with the actual command)
 CMD ["npm", "start"]
