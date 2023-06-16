@@ -31,4 +31,4 @@ jobs:
           tags: ${{secrets.DOCKERHUB_USERNAME}}/test-github-action
 
       - name: Verify
-        run: echo ${{ step.docker_build.outputs.digest}}
+        run: echo ${{ steps.docker_build.outputs.digest}}
